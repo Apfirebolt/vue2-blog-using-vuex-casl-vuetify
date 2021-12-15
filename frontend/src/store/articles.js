@@ -22,7 +22,7 @@ export default {
         .then(response => an('Article', response.body.item))
     },
 
-    save(_, { id, ...data }) {
+    save(_, data) {
       const request = id
         ? http(`/articles/${id}`, { method: 'PUT', data })
         : http('/articles', { method: 'POST', data })

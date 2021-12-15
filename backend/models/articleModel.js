@@ -14,6 +14,11 @@ const articleSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    published: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
   },
   {
     timestamps: true,
